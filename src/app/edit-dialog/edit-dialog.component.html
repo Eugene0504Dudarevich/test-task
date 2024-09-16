@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>
+  Edit row {{data.position}} ({{data.name}})
+</h2>
+<form [formGroup]="form"
+      (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Number</mat-label>
+      <input type="number" matInput formControlName="position" />
+    </mat-form-field>
+    @if(form.get('position')?.errors?.['required']) {
+      <div class="error">Number is required</div>
+    }
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    @if (form.get('name')?.errors?.['required']) {
+      <div class="error">Name is required</div>
+    }
+    <mat-form-field>
+      <mat-label>Weight</mat-label>
+      <input type="number" matInput formControlName="weight" />
+    </mat-form-field>
+    @if (form.get('weight')?.errors?.['required']) {
+      <div class="error">Weight is required</div>
+    }
+    <mat-form-field>
+      <mat-label>Symbol</mat-label>
+      <input matInput formControlName="symbol" />
+    </mat-form-field>
+    @if (form.get('symbol')?.errors?.['required']) {
+      <div class="error">Symbol is required</div>
+    }
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button
+      mat-button
+      [disabled]="form.invalid"
+      type="submit">
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

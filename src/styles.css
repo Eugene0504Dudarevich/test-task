@@ -1,0 +1,20 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.edit-dialog {
+  position: absolute !important;
+  top: 20%;
+  left: 40%;
+}
+
+form .mat-mdc-dialog-content .mat-mdc-form-field {
+  display: block;
+}
+
+.mat-mdc-dialog-actions.mdc-dialog__actions {
+  padding: 0 24px 20px 24px;
+}
+

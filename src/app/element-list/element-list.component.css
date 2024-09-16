@@ -1,0 +1,12 @@
+.mat-mdc-row .mat-mdc-cell {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.mat-mdc-row:hover {
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
